@@ -1,0 +1,10 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "files.exclude": {
+    ".eslintcache": true,
+  },
+  "blueprint.templatesPath": ["./.blueprint"],
+}
