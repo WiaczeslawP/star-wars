@@ -47,7 +47,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 const SearchInput = ({ value, onChange }: SearchInputProps) => {
-  const [text, setText] = useState('')
+  const [text, setText] = useState(value)
   useDebounceCallback(
     () => {
       if (value !== text) {
@@ -67,7 +67,6 @@ const SearchInput = ({ value, onChange }: SearchInputProps) => {
         value={text}
         onChange={event => setText(event.target.value)}
         placeholder="Search…"
-        inputProps={{ 'aria-label': 'search' }}
       />
     </Search>
   )

@@ -8,11 +8,11 @@ export const usePeopleParams = () => {
   const search = searchParams.get('search') || ''
 
   const setPage = useCallback(
-    (page: number) => setSearchParams({ page: `${page}` }),
-    [setSearchParams],
+    (page: number) => setSearchParams({ page: `${page}`, search }),
+    [search, setSearchParams],
   )
   const setSearch = useCallback(
-    (search: string) => setSearchParams({ search, page: '1' }),
+    (search: string) => setSearchParams({ page: '1', search }),
     [setSearchParams],
   )
 

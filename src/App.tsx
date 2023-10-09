@@ -7,7 +7,7 @@ import Person from './components/Person'
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/star-wars">
         <Routes>
           <Route path="people" element={<People />} />
           <Route path="people/:id/*" element={<Person />} />
